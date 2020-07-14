@@ -63,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         children: <Widget>[
                           Text(
-                            "Begus",
+                            "Bagus",
                             style: GoogleFonts.kanit(
                               fontSize: 24,
                               fontWeight: FontWeight.w600,

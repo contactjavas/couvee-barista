@@ -15,6 +15,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      routes: {
+        '/addPoints': (context) {
+          return AddPoints();
+        }
+      },
       home: Scaffold(
         body: Stack(
           children: <Widget>[

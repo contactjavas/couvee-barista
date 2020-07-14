@@ -2,26 +2,16 @@ import 'package:barista/screens/screens.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
+import '../widgets.dart';
+
 class ServicesList extends StatefulWidget {
   @override
   _ServicesListState createState() => _ServicesListState();
 }
 
 class _ServicesListState extends State<ServicesList> {
-  double screenWidth;
-  double screenHeight;
-
-  double body1FontSize;
-  double subheadFontSize;
-
   @override
   Widget build(BuildContext context) {
-    screenHeight = MediaQuery.of(context).size.height;
-    screenWidth = MediaQuery.of(context).size.width;
-
-    body1FontSize = Theme.of(context).textTheme.bodyText2.fontSize;
-    subheadFontSize = Theme.of(context).textTheme.subtitle1.fontSize;
-
     return DraggableScrollableSheet(
       initialChildSize: 0.67,
       minChildSize: 0.67,
@@ -59,6 +49,9 @@ class _ServicesListState extends State<ServicesList> {
                   backgroundColor: Color.fromRGBO(255, 240, 229, 1),
                   foregroundColor: Color.fromRGBO(251, 222, 202, 1),
                   image: "assets/coin.png",
+                  callback: () {
+                    Navigator.pushNamed(context, "/addPoints");
+                  },
                 ),
                 SizedBox(
                   height: 25.0,
@@ -76,84 +69,6 @@ class _ServicesListState extends State<ServicesList> {
           ),
         );
       },
-    );
-  }
-}
-
-class ServiceListItem extends StatelessWidget {
-  final String title;
-  final String description;
-  final String image;
-  final Color backgroundColor;
-  final Color foregroundColor;
-  const ServiceListItem({
-    Key key,
-    this.title,
-    this.description,
-    this.image,
-    this.backgroundColor,
-    this.foregroundColor,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: backgroundColor,
-        borderRadius: BorderRadius.circular(
-          10.0,
-        ),
-      ),
-      padding: EdgeInsets.all(8.0),
-      height: MediaQuery.of(context).size.height * 0.15,
-      width: double.infinity,
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-              color: foregroundColor,
-              borderRadius: BorderRadius.circular(
-                10.0,
-              ),
-            ),
-            padding: EdgeInsets.all(20.0),
-            child: Image.asset(
-              image,
-            ),
-          ),
-          SizedBox(width: 16.0),
-          Flexible(
-            flex: 6,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Spacer(flex: 4),
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                Spacer(flex: 2),
-                Text(
-                  description,
-                  style: TextStyle(
-                    fontSize: 12.0,
-                    color: Colors.grey,
-                  ),
-                ),
-                Spacer(flex: 4),
-              ],
-            ),
-          ),
-          Icon(
-            EvaIcons.arrowIosForwardOutline,
-            color: foregroundColor,
-          ),
-        ],
-      ),
     );
   }
 }
