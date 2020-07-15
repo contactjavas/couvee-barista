@@ -1,4 +1,4 @@
-package com.example.barista
+package id.co.couvee.barista
 
 import io.flutter.embedding.android.FlutterActivity
 
