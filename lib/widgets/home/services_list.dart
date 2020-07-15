@@ -13,8 +13,8 @@ class _ServicesListState extends State<ServicesList> {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      initialChildSize: 0.67,
-      minChildSize: 0.67,
+      initialChildSize: 0.65,
+      minChildSize: 0.25,
       maxChildSize: 0.95,
       builder: (
         BuildContext context,
@@ -37,7 +37,7 @@ class _ServicesListState extends State<ServicesList> {
           ),
           child: Padding(
             padding: EdgeInsets.only(
-              top: 24.0,
+              top: 30.0,
               left: 16.0,
               right: 16.0,
             ),
@@ -54,7 +54,7 @@ class _ServicesListState extends State<ServicesList> {
                   },
                 ),
                 SizedBox(
-                  height: 25.0,
+                  height: 15.0,
                 ),
                 ServiceListItem(
                   title: "Pengambilan Merchandise",
