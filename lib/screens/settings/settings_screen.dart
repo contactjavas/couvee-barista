@@ -3,8 +3,8 @@ import 'package:barista/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AddPoints extends StatelessWidget {
-  const AddPoints({Key key}) : super(key: key);
+class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class AddPoints extends StatelessWidget {
           ],
         ),
         title: Text(
-          "Tunjukkan ke Pelanggan",
+          "Menu",
           style: GoogleFonts.kanit(
             fontSize: 18.0,
             fontWeight: FontWeight.w500,
@@ -51,7 +51,7 @@ class AddPoints extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           TexturedWall(),
-          AddPointsBody(),
+          SettingsBody(),
         ],
       ),
     );

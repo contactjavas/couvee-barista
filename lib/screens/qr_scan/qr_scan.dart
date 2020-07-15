@@ -40,6 +40,7 @@ class _ScanQrcode extends State<ScanQrcode> {
           child: new Icon(
             Icons.arrow_back,
             size: 16.0,
+            color: Colors.black,
           ),
           shape: new CircleBorder(),
           elevation: 0.0,
@@ -48,7 +49,10 @@ class _ScanQrcode extends State<ScanQrcode> {
       ),
       centerTitle: true,
       title: Text(
-        'Scan QRCode dari Barista',
+        'Scan Barcode dari Customer',
+        style: TextStyle(
+          color: Colors.black,
+        ),
       ),
     );
 
@@ -90,34 +94,39 @@ class _ScanQrcode extends State<ScanQrcode> {
                     right: 25,
                     left: 25,
                   ),
-                  color: CompanyColors.inactiveTabColor[200],
+                  color: CompanyColors.inactiveTabColor[100],
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(
-                          bottom: stepItemSize / 5,
-                        ),
-                        child: Text(
-                          "Langkah- langkah penambahan point:",
-                          style: TextStyle(
-                            color: CompanyColors.lightGrey,
-                          ),
-                        ),
-                      ),
                       InkWell(
                         onTap: () {
-                          // _scaffoldKey.currentState.showBottomSheet<void>(
-                          //   (BuildContext context) {
-                          //     return PointsKeyboard();
-                          //   },
-                          // );
-                          // _scaffoldKey.currentState.showBottomSheet<void>(
-                          //     (context) => WaitingTransfer());
-                          // _scaffoldKey.currentState.showBottomSheet<void>(
-                          //   (context) => ConfirmTransfer(),
-                          // );
+                          showModalBottomSheet(
+                            context: context,
+                            isDismissible: true,
+                            isScrollControlled: true,
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(35.0),
+                                topRight: Radius.circular(35.0),
+                              ),
+                            ),
+                            builder: (BuildContext context) {
+                              return BottomModalDetails();
+                            },
+                          );
                         },
-                        child: Text("Hello"),
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.65,
+                          child: Text(
+                            "Scan QR-code dari pelanggan lalu cek ketersediaan merchandise.",
+                            style: TextStyle(
+                              fontSize: 16.0,
+                              color: CompanyColors.lightGrey,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
                       ),
                     ],
                   ),

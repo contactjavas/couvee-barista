@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
         },
         "/qrScan": (context) {
           return ScanQrcode();
+        },
+        "/settings": (context) {
+          return SettingsScreen();
         }
       },
       home: Scaffold(

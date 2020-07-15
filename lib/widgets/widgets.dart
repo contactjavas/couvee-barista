@@ -5,3 +5,6 @@ export 'add_points/add_point_modal.dart';
 export 'add_points/add_point_modal_confirm.dart';
 export 'qr_code/scan_qr.dart';
 export 'qr_code/scan_qr_overlay.dart';
+export 'qr_code/modal_bottom_details.dart';
+export 'qr_code/modal_bottom_confirm.dart';
+export 'settings/settings_body.dart';
