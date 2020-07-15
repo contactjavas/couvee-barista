@@ -76,7 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: 45.0,
+                        height: 40.0,
                         child: FlatButton.icon(
                           color: CompanyColors.brown,
                           shape: RoundedRectangleBorder(
