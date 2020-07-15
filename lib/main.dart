@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/addPoints': (context) {
           return AddPoints();
+        },
+        "/qrScan": (context) {
+          return ScanQrcode();
         }
       },
       home: Scaffold(

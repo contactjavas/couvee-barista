@@ -1,5 +1,4 @@
 import 'package:barista/screens/screens.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets.dart';
@@ -63,6 +62,9 @@ class _ServicesListState extends State<ServicesList> {
                   image: "assets/bag.png",
                   backgroundColor: Color.fromRGBO(238, 233, 208, 1),
                   foregroundColor: Color.fromRGBO(221, 213, 172, 1),
+                  callback: () {
+                    Navigator.pushNamed(context, "/qrScan");
+                  },
                 ),
               ],
             ),
