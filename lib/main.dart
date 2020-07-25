@@ -6,6 +6,7 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // Couvee packages.
 import 'package:barista/config/company_colors.dart';
@@ -36,6 +37,36 @@ class CouveeApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: CompanyColors.brown,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        textTheme: GoogleFonts.robotoTextTheme(
+          Theme.of(context).textTheme,
+        ),
+        bottomSheetTheme: BottomSheetThemeData(
+          backgroundColor: Colors.transparent,
+        ),
+        buttonTheme: ButtonThemeData(
+          buttonColor: CompanyColors.brown,
+          height: 55.0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          fillColor: CompanyColors.lightInputColor,
+          filled: true,
+          contentPadding: EdgeInsets.symmetric(
+            vertical: 17,
+            horizontal: 15,
+          ),
+          border: OutlineInputBorder(
+            borderRadius: const BorderRadius.all(
+              const Radius.circular(10.0),
+            ),
+            borderSide: BorderSide(
+              width: 0,
+              style: BorderStyle.none,
+            ),
+          ),
+        ),
       ),
       routes: {
         '/addPoints': (context) {
