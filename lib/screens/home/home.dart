@@ -1,12 +1,16 @@
 // Core packages.
 import 'dart:ui';
-import 'package:barista/screens/screens.dart';
-import 'package:barista/widgets/home/services_list.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+// Extension packages.
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+// Couvee packages.
+import 'package:barista/config/company_colors.dart';
+import 'package:barista/screens/screens.dart';
+import 'package:barista/widgets/home/services_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key key}) : super(key: key);

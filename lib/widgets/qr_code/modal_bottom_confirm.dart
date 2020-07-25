@@ -1,5 +1,9 @@
-import 'package:barista/screens/screens.dart';
+// Core packages.
 import 'package:flutter/material.dart';
+
+// Couvee packages.
+import 'package:barista/screens/screens.dart';
+import 'package:barista/config/company_colors.dart';
 
 class BottomModalConfirm extends StatelessWidget {
   const BottomModalConfirm({Key key}) : super(key: key);

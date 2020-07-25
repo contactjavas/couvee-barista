@@ -1,7 +1,11 @@
-import 'package:barista/screens/utils/company_colors.dart';
+// Core packages.
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
+// Extension packages.
+import 'package:barista/config/company_colors.dart';
+
+// Couvee packages.
+import 'package:google_fonts/google_fonts.dart';
 import '../widgets.dart';
 
 class AddPointBottomModal extends StatelessWidget {

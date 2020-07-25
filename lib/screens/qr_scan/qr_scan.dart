@@ -1,8 +1,10 @@
 // Core packages.
-import 'package:barista/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+// Couvee packages.
+import 'package:barista/widgets/widgets.dart';
+import 'package:barista/config/company_colors.dart';
 import '../screens.dart';
 
 class ScanQrcode extends StatefulWidget {

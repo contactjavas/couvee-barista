@@ -1,7 +1,12 @@
+// Core packages.
+import 'package:flutter/material.dart';
+
+// Extension packages.
+import 'package:google_fonts/google_fonts.dart';
+
+// Couvee packages.
 import 'package:barista/screens/screens.dart';
 import 'package:barista/widgets/widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AddPoints extends StatelessWidget {
   const AddPoints({Key key}) : super(key: key);

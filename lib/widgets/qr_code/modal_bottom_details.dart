@@ -1,7 +1,10 @@
-import 'package:barista/screens/screens.dart';
+// Core packages.
 import 'package:flutter/material.dart';
 
+// Couvee packages.
+import 'package:barista/screens/screens.dart';
 import '../widgets.dart';
+import 'package:barista/config/company_colors.dart';
 
 class BottomModalDetails extends StatelessWidget {
   const BottomModalDetails({Key key}) : super(key: key);

@@ -1,5 +1,8 @@
-import 'package:barista/screens/utils/company_colors.dart';
+// Core packages.
 import 'package:flutter/material.dart';
+
+// Couvee packages.
+import 'package:barista/config/company_colors.dart';
 
 class AddPointsModalConfirm extends StatelessWidget {
   const AddPointsModalConfirm({

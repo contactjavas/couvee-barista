@@ -1,6 +1,10 @@
+// Core packages.
+import 'package:flutter/material.dart';
+
+// Couvee packages.
 import 'package:barista/screens/screens.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-import 'package:flutter/material.dart';
+import 'package:barista/config/company_colors.dart';
 
 class _Item {
   final String headerValue;

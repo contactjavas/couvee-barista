@@ -1,6 +1,8 @@
-import 'package:barista/screens/screens.dart';
+// Core packages.
 import 'package:flutter/material.dart';
 
+// Couvee packages.
+import 'package:barista/screens/screens.dart';
 import '../widgets.dart';
 
 class ServicesList extends StatefulWidget {
