@@ -1,4 +1,5 @@
 // Core packages.
+import 'package:barista/hive/user.dart';
 import 'package:flutter/material.dart';
 
 // Extension packages.
@@ -15,6 +16,7 @@ import 'package:barista/screens/screens.dart';
 
 void main() async {
   await Hive.initFlutter();
+  Hive.registerAdapter(UserAdapter());
   await Hive.openBox('setting');
   await Hive.openBox('user');
 
